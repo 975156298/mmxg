@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>名码享购</title>
+</head>
+<body>
+<div id="qrcode" style="display: flex;justify-content: center;margin-top: 40px">
+
+</div>
+<p style="text-align: center;">请用手机扫描二维码登录</p>
+
+</body>
+<script src="js/qrcode.js"></script>
+<script>
+    var url = window.location.origin+"/mobile/www/index.html";
+    new QRCode(document.getElementById("qrcode"), {
+        text: url,
+        width: 255,
+        height: 255,
+        colorDark : "#000000",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.H
+    });
+</script>
+</html>
